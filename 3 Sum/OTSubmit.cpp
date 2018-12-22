@@ -31,7 +31,6 @@ class Solution {
                 ++i;
             }
         }
-
         return result;
     }
 
@@ -52,7 +51,7 @@ class Solution {
 
 int main() {
     Solution s;
-    vector<int> a = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
+    vector<int> a = {-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6};
     vector<vector<int>> v = s.threeSum(a);
     for (int i = 0; i < v.size(); ++i) {
         for (int j = 0; j < v[i].size(); ++j) {
