@@ -73,7 +73,7 @@ static const auto io_sync_off=[](){
     函数体
 }
 ```
-在声明后直接加`()`会直接调用, 感觉和JavaScript的函数差不多
+在声明后直接加`()`会直接调用, 感觉和JavaScript的函数差不多        
 至于这个函数的作用
 ```
 std::ios::sync_with_stdio(false);
