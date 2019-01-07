@@ -14,6 +14,8 @@ class BSTree_Linked {
         right = nullptr;
     }
     T getMax(BSTree_Linked* t = nullptr) {
+        // @t 作为起点的节点, 为空时从根节点开始
+        // @return 返回二叉搜索树中的最大值
         if (t == nullptr) {
             t = right;
         }
@@ -27,6 +29,8 @@ class BSTree_Linked {
         return nullptr;
     }
     T getMin(BSTree_Linked* t = nullptr) {
+        // @t 作为起点的节点, 为空时从根节点开始
+        // @return 返回二叉搜索树中的最小值
         if (t == nullptr) {
             t = left;
         }
@@ -40,6 +44,7 @@ class BSTree_Linked {
         return nullptr;
     }
     void insert(T v) {
+        // @v 插入值为v的节点
         BSTree_Linked* t = this;
         while (t) {
             if (t->val > v) {
@@ -60,6 +65,9 @@ class BSTree_Linked {
         }
     }
     BSTree_Linked* find(T v, BSTree_Linked* t = nullptr) {
+        // @v 寻找val为v的节点
+        // @t 作为起点的节点, 为空时从根节点开始
+        // @retrun 指向该节点的指针, 不存在时为nullptr
         if (t == nullptr) {
             t = this;
         }
@@ -76,6 +84,8 @@ class BSTree_Linked {
         return nullptr;
     }
     void del(T v, BSTree_Linked* t = nullptr) {
+        // @v 删除val为v的节点
+        // @t 作为起点的节点, 为空时从根节点开始
         if (t == nullptr) {
             t = this;
         }
@@ -128,6 +138,8 @@ class BSTree_Linked {
         }
     }
     void printPreOrder(BSTree_Linked* t = nullptr) {
+        // 前序遍历二叉树
+        // @t 作为起点的节点, 为空时从根节点开始
         if (t == nullptr) {
             t = this;
         }
@@ -136,6 +148,8 @@ class BSTree_Linked {
         if (t->right) printPreOrder(t->right);
     }
     void printMidOrder(BSTree_Linked* t = nullptr) {
+        // 中序遍历二叉树
+        // @t 作为起点的节点, 为空时从根节点开始
         if (t == nullptr) {
             t = this;
         }
@@ -144,6 +158,8 @@ class BSTree_Linked {
         if (t->right) printMidOrder(t->right);
     }
     void printBackOrder(BSTree_Linked* t = nullptr) {
+        // 后序遍历二叉树
+        // @t 作为起点的节点, 为空时从根节点开始
         if (t == nullptr) {
             t = this;
         }
